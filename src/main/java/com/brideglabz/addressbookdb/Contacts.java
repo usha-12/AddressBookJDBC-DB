@@ -55,7 +55,6 @@ public class Contacts {
     public void setState(String state) {
         this.state = state;
     }
-
     public int getZip() {
         return zip;
     }
