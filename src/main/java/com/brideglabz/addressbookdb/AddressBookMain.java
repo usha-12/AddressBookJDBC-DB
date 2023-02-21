@@ -1,5 +1,6 @@
 package com.brideglabz.addressbookdb;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
@@ -33,5 +34,15 @@ public class AddressBookMain {
         AddressBook addressBookRepo = new AddressBook();
         System.out.println("Enter the address,city,state, zip to Update");
         addressBookRepo.updateCityByZip(scanner.next(), scanner.next(), scanner.next(), scanner.nextInt());
+    }
+    private static void reteriveDataForParticularDate() {
+        AddressBook addressBook = new AddressBook();
+        System.out.println("Enter the Date of Joining (YYYY-MM-DD");
+        System.out.println("Enter year , month and Day ex: 2020 02 03");
+        List<Contacts> employeeInfoList = addressBook.findAllForParticularDate(LocalDate.of(scanner.nextInt(), scanner.nextInt(), scanner.nextInt()));
+        for (Contacts employee : employeeInfoList
+        ) {
+            System.out.println(employee + "\n");
+        }
     }
 }
