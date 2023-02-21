@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cfdf91d1-bb7c-4bf6-8892-ffa9afa1782c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/brideglabz/addressbookdb/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brideglabz/addressbookdb/AddressBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brideglabz/addressbookdb/AddressBookMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brideglabz/addressbookdb/AddressBookMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
