@@ -1,25 +1,50 @@
 package com.brideglabz.addressbookdb;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
+import static jdk.jfr.internal.consumer.EventLog.update;
+
 public class AddressBookMain {
     static Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 
         boolean exit = false;
         while (!exit) {
-            System.out.println(" Press\n 1 ->  Retrieve data\n 2 -> Exit");
-            switch (scanner.nextInt()) {
+            System.out.println(" Press\n 1 ->  Retrieve data\n 2 -> Update Address,city,state,zip  by srNo\n " +
+                    "3 -> Retrieve data for particular date\n" +
+                    " 4 -> Retrieve Count of Contacts for City or State\n" +
+                    " 5 -> Add new Contacts to AddressBook\n" +
+                    " 6 -> exit");
+            int choice = scanner.nextInt();
+            switch (choice) {
                 case 1:
                     retrieveData();
                     break;
                 case 2:
+                    update();
+                    break;
+                case 3:
+                    retrieveDataForParticularDate();
+                    break;
+                case 4:
+                    retrieveCountByCityOrState();
+                case 5:
+                    addNewContact();
+                    break;
+                case 6:
                     exit = true;
             }
         }
+    }
+
+    private static void retrieveDataForParticularDate() {
+    }
+
+    private static void addNewContact() {
     }
 
     private static void retrieveData() {
