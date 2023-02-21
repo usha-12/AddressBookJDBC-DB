@@ -30,11 +30,13 @@ public class AddressBookMain {
             System.out.println(employee + "\n");
         }
     }
+
     private static void updateCity() {
         AddressBook addressBookRepo = new AddressBook();
         System.out.println("Enter the address,city,state, zip to Update");
         addressBookRepo.updateCityByZip(scanner.next(), scanner.next(), scanner.next(), scanner.nextInt());
     }
+
     private static void reteriveDataForParticularDate() {
         AddressBook addressBook = new AddressBook();
         System.out.println("Enter the Date of Joining (YYYY-MM-DD");
@@ -44,5 +46,25 @@ public class AddressBookMain {
         ) {
             System.out.println(employee + "\n");
         }
+    }
+
+    private static void retrieveCountByCityOrState() {
+        AddressBook addressBookRepo = new AddressBook();
+        System.out.println("Enter 1 -> Contacts count by City\n" +
+                "2 -> Contacts count by State");
+
+        switch (scanner.nextInt()) {
+            case 1:
+                System.out.println("Enter city Name");
+                int cityContactsCount = addressBookRepo.countByCiy(scanner.next());
+                System.out.println("Number of Contacts is Given city= " + cityContactsCount);
+                break;
+            case 2:
+                System.out.println("Enter state name");
+                int stateContactsCount = addressBookRepo.countByState(scanner.next());
+                System.out.println("Number of Contacts is Given state= " + stateContactsCount);
+                break;
+        }
+
     }
 }
